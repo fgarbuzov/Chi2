@@ -4,10 +4,14 @@
 #include <QtSql>
 
 typedef QVector< QPair<QString, int> > SamplesInfo; // name, size
+typedef struct {
+        double* array;
+        size_t size;
+} Sample;
 
 class DBInteraction: public QWidget
 {
-    Q_OBJECT
+    //Q_OBJECT
 public:
     DBInteraction(QString host, QString dbname, QString user, QString password, int port);
     ~DBInteraction();
@@ -23,7 +27,7 @@ public:
 
     /** Get sample from data base
       */
-    double* getSample(QString sampleName);
+    Sample getSample(QString sampleName);
 
 public slots:
     void closeConnection();
