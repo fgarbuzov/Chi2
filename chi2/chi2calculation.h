@@ -2,11 +2,8 @@
 #define CHI2CALCULATION_H
 
 #include <QWidget>
-#include <QtSql/QSqlDatabase>
-#include <QtSql/QSqlQuery>
-#include <QtSql/QSqlDriver>
-#include <QtSql/QSqlError>
 #include <QDebug>
+#include <dbinterañtion.h>
 
 namespace Ui {
     class Chi2Calculation;
@@ -25,7 +22,7 @@ private slots:
 
 private:
     Ui::Chi2Calculation *ui;
-    QSqlDatabase db;
+    DBInteraction *db;
 };
 
 #endif // CHI2CALCULATION_H

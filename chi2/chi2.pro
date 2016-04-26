@@ -4,15 +4,17 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql
 
 TARGET = chi2
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        chi2calculation.cpp
+        chi2calculation.cpp \
+    dbinteraction.cpp
 
-HEADERS  += chi2calculation.h
+HEADERS  += chi2calculation.h \
+    dbinterañtion.h
 
 FORMS    += chi2calculation.ui

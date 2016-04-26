@@ -6,19 +6,7 @@ Chi2Calculation::Chi2Calculation(QWidget *parent) :
     ui(new Ui::Chi2Calculation)
 {
     ui->setupUi(this);
-
-    db = QSqlDatabase::addDatabase("QMYSQL");
-    db.setHostName("127.0.0.1");
-    db.setDatabaseName("chi2db");
-    db.setUserName("root");
-    db.setPassword("best291");
-
-    if (!db.open())
-    {
-        qDebug() << db.lastError().text();
-    }
-    else
-        qDebug() << "Connected";
+    db = new DBInteraction("localhist", "chi2", "root", "1234");
 }
 
 Chi2Calculation::~Chi2Calculation()
