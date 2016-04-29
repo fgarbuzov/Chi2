@@ -21,6 +21,7 @@ public:
 
  private:
     // работа с кэшем
+
     DirectCalculation* calc;
 
 };
