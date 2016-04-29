@@ -11,10 +11,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        chi2calculation.cpp \
     dbinteraction.cpp
 
-HEADERS  += chi2calculation.h \
-    dbinterañtion.h
+HEADERS  += \
+    dbinterañtion.h \
+    calculator.h
 
-FORMS    += chi2calculation.ui
+FORMS    +=
