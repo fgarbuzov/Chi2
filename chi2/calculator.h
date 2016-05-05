@@ -1,29 +1,25 @@
-#ifndef CHI2CALC_H
-#define CHI2CALC_H
+#ifndef CALCULATOR_H
+#define CALCULATOR_H
 
 #include<QObject>
 
 class AbstractCalculator
 {
 public:
-    static Calculator* createCalculator(int type, DirectCalculation*);
+    static AbstractCalculator* createCalculator(int type, DirectCalculation*);
     virtual void calculate(Sample);
 };
 
-class Calculator: public AbstractCalculator
+class Chi2Calculator: public AbstractCalculator
 {
     Q_OBJECT
 public:
     Calculator();
-    ~Calculator();
-
     double calculate(Sample sample);
 
  private:
-    // работа с кэшем
-
     DirectCalculation* calc;
-
+    // работа с кэшем здесь
 };
 
 class DirectCalculation
@@ -39,4 +35,4 @@ public:
 };
 
 
-#endif // CHI2CALC_H
+#endif // CALCULATOR_H
