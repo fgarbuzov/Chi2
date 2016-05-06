@@ -8,14 +8,14 @@
 #include <QPair>
 #include <QWidget>
 
-typedef QVector< QPair<QString, int> > SamplesInfo; // name, size
+/*typedef QVector< QPair<QString, int> > SamplesInfo; // name, size
 typedef struct {
         double* array;
         size_t size;
 } Sample;
 
 typedef QPair<double, double> Point; // chi2, value
-typedef QVector<Point> PointVector;
+typedef QVector<Point> PointVector;*/
 
 class DBInteraction: public QObject
 {
