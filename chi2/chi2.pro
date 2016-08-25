@@ -18,7 +18,6 @@ SOURCES += main.cpp\
 HEADERS  += \
     dbinterañtion.h \
     abstractcalculator.h \
-    sample.h \
     chi2calculator.h
 
 FORMS    +=
